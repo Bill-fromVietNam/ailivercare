@@ -1,0 +1,317 @@
+.appointmentsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-gray-900);
+}
+
+.actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.calendarWrapper {
+  background: white;
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.calendarHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.calendarTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.calendarNav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.navButton:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.viewSelector {
+  display: flex;
+  gap: 0.25rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 0.25rem;
+}
+
+.viewButton {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.viewButton.active {
+  background: white;
+  color: var(--color-primary);
+}
+
+.calendar {
+  padding: 1.5rem;
+}
+
+.weekdaysHeader {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.weekday {
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--color-gray-600);
+  padding: 0.75rem;
+}
+
+.monthGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+}
+
+.dayCell {
+  aspect-ratio: 1/1;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--color-gray-200);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+.dayCell:hover {
+  background-color: var(--color-gray-100);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.today {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.1);
+}
+
+.otherMonth {
+  opacity: 0.5;
+}
+
+.dayNumber {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.today .dayNumber {
+  color: var(--color-primary);
+}
+
+.events {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.event {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+.event.priority1 { background-color: rgba(229, 57, 53, 0.1); border-left: 3px solid var(--color-danger); }
+.event.priority2 { background-color: rgba(255, 160, 0, 0.1); border-left: 3px solid var(--color-warning); }
+.event.priority3 { background-color: rgba(25, 118, 210, 0.1); border-left: 3px solid var(--color-primary); }
+
+.detailView {
+  background: white;
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.appointmentList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.appointmentCard {
+  background: white;
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+  padding: 1rem;
+  border-left: 4px solid var(--color-gray-300);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.appointmentCard:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.appointmentCard.confirmed { border-left-color: var(--color-success); }
+.appointmentCard.pending { border-left-color: var(--color-warning); }
+.appointmentCard.canceled { border-left-color: var(--color-danger); }
+
+.appointmentHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.appointmentTime {
+  font-weight: 600;
+}
+
+.appointmentStatus {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.appointmentStatus.confirmed {
+  background-color: rgba(67, 160, 71, 0.1);
+  color: var(--color-success);
+}
+
+.appointmentStatus.pending {
+  background-color: rgba(255, 160, 0, 0.1);
+  color: var(--color-warning);
+}
+
+.appointmentStatus.canceled {
+  background-color: rgba(229, 57, 53, 0.1);
+  color: var(--color-danger);
+}
+
+.appointmentTitle {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.appointmentDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--color-gray-600);
+}
+
+.appointmentDetail {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.appointmentActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+/* Dark Mode */
+.darkMode .calendarWrapper,
+.darkMode .detailView,
+.darkMode .appointmentCard {
+  background-color: var(--color-gray-800);
+  color: white;
+}
+
+.darkMode .dayCell {
+  border-color: var(--color-gray-700);
+}
+
+.darkMode .dayCell:hover {
+  background-color: var(--color-gray-700);
+}
+
+.darkMode .weekday {
+  color: var(--color-gray-400);
+}
+
+.darkMode .appointmentDetails {
+  color: var(--color-gray-400);
+}
+
+.darkMode .title {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .weekdaysHeader, .monthGrid {
+    gap: 0.25rem;
+  }
+  
+  .dayCell {
+    padding: 0.25rem;
+  }
+  
+  .dayNumber {
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .event {
+    padding: 0.125rem 0.25rem;
+    font-size: 0.625rem;
+  }
+} 

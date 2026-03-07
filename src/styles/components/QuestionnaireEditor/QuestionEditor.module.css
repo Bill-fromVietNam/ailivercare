@@ -1,0 +1,271 @@
+.questionEditor {
+  background-color: var(--background-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 16px;
+  transition: all 0.2s;
+}
+
+.questionEditor:hover {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.questionEditor.active {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 2px var(--accent-color-light);
+}
+
+.questionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.questionType {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.typeSelect {
+  padding: 6px 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+  min-width: 150px;
+}
+
+.requiredCheckbox {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.removeButton {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-color);
+  background-color: var(--background-secondary);
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.removeButton:hover {
+  background-color: var(--error-color-light);
+  color: var(--error-color);
+  border-color: var(--error-color);
+}
+
+.questionContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formGroup {
+  margin-bottom: 8px;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+.questionInput {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+}
+
+.optionsSection {
+  border-top: 1px solid var(--border-color);
+  padding-top: 16px;
+  margin-top: 8px;
+}
+
+.optionsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.optionsHeader h4 {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+.addOptionButton {
+  padding: 4px 10px;
+  background-color: var(--background-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  color: var(--text-primary);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.addOptionButton:hover {
+  background-color: var(--accent-color-light);
+  color: var(--accent-color);
+  border-color: var(--accent-color-light);
+}
+
+.optionDialog {
+  background-color: var(--background-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.optionForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.optionField {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.optionField label {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.optionField input {
+  padding: 6px 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+}
+
+.optionActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.cancelOptionButton,
+.saveOptionButton {
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cancelOptionButton {
+  background-color: var(--background-primary);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+}
+
+.cancelOptionButton:hover {
+  background-color: var(--background-hover);
+}
+
+.saveOptionButton {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+}
+
+.saveOptionButton:hover:not(:disabled) {
+  background-color: var(--accent-color-dark);
+}
+
+.saveOptionButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.optionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.optionItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.optionFields {
+  display: flex;
+  gap: 8px;
+  flex-grow: 1;
+}
+
+.optionInput {
+  padding: 6px 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  flex-grow: 1;
+}
+
+.removeOptionButton {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-color);
+  background-color: var(--background-secondary);
+  color: var(--text-secondary);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.removeOptionButton:hover {
+  background-color: var(--error-color-light);
+  color: var(--error-color);
+  border-color: var(--error-color);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .questionType {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .typeSelect {
+    width: 100%;
+  }
+  
+  .optionFields {
+    flex-direction: column;
+  }
+} 

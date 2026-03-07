@@ -1,0 +1,174 @@
+.loginContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-primary);
+  padding: 20px;
+}
+
+.loginFormContainer {
+  width: 100%;
+  max-width: 450px;
+  padding: 2rem;
+  background-color: var(--background-elevated);
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+}
+
+.loginHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.loginTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.loginSubtitle {
+  color: var(--text-tertiary);
+  font-size: 1rem;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formLabel {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.formInput {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 1rem;
+  border: 1px solid var(--border-medium);
+  border-radius: 4px;
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+  transition: all 0.2s ease;
+}
+
+.formInput:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px var(--primary-color-light);
+  outline: none;
+}
+
+.inputError {
+  border-color: var(--danger-color);
+}
+
+.errorMessage {
+  color: var(--danger-color);
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+}
+
+.passwordInputWrapper {
+  position: relative;
+}
+
+.showPasswordBtn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 0.8rem;
+  color: var(--text-tertiary);
+  cursor: pointer;
+  padding: 0;
+}
+
+.showPasswordBtn:hover {
+  color: var(--text-primary);
+}
+
+.forgotPasswordContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -0.5rem;
+}
+
+.forgotPasswordLink {
+  font-size: 0.8rem;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.forgotPasswordLink:hover {
+  text-decoration: underline;
+}
+
+.loginButton {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 0.5rem;
+}
+
+.loginButton:hover {
+  background-color: var(--primary-color-hover);
+}
+
+.loginButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.registerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 2rem;
+}
+
+.registerLink {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.registerLink:hover {
+  text-decoration: underline;
+}
+
+.themeToggleContainer {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+}
+
+@media (max-width: 480px) {
+  .loginFormContainer {
+    padding: 1.5rem;
+  }
+  
+  .loginTitle {
+    font-size: 1.75rem;
+  }
+} 

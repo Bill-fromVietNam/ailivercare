@@ -1,0 +1,96 @@
+.registerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: var(--bg-color);
+}
+
+.registerFormContainer {
+  width: 100%;
+  max-width: 500px;
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.registerHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.registerTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.registerSubtitle {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.successMessage {
+  background-color: var(--success-bg);
+  color: var(--success-text);
+  border: 1px solid var(--success-border);
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  max-width: 500px;
+}
+
+.successTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--success-text);
+}
+
+.successText {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.redirectText {
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  color: var(--text-secondary);
+}
+
+.loginLink {
+  display: inline-block;
+  background-color: var(--primary);
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 6px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.loginLink:hover {
+  background-color: var(--primary-dark);
+}
+
+.themeToggleContainer {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+@media (max-width: 640px) {
+  .registerFormContainer {
+    padding: 1.5rem;
+  }
+  
+  .registerTitle {
+    font-size: 1.5rem;
+  }
+} 

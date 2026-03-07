@@ -1,0 +1,619 @@
+.questionnairesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-gray-900);
+}
+
+.actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.tabList {
+  display: flex;
+  border-bottom: 1px solid var(--color-gray-200);
+  margin-bottom: 1.5rem;
+}
+
+.tab {
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  color: var(--color-gray-600);
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tab:hover {
+  color: var(--color-primary);
+}
+
+.tab.active {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+}
+
+.questionnaireGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sectionHeader {
+  margin-bottom: 1rem;
+}
+
+.sectionHeader h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-gray-900);
+  margin-bottom: 0.5rem;
+}
+
+.sectionHeader p {
+  color: var(--color-gray-600);
+  font-size: 0.875rem;
+}
+
+.questionnaireCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.loadingSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: var(--color-gray-50);
+  border-radius: 8px;
+  border: 1px dashed var(--color-gray-300);
+}
+
+.loadingSpinner {
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--color-gray-300);
+  border-top: 2px solid var(--color-primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 0.5rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.errorSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: var(--color-red-50);
+  border-radius: 8px;
+  border: 1px solid var(--color-red-200);
+}
+
+.errorMessage {
+  color: var(--color-red-600);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.emptySection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: var(--color-gray-50);
+  border-radius: 8px;
+  border: 1px dashed var(--color-gray-300);
+  color: var(--color-gray-600);
+}
+
+.questionnaireCard {
+  background: white;
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.questionnaireCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.cardHeader {
+  padding: 1.25rem;
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.cardMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.timeEstimate {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 0.9;
+}
+
+.questionCount {
+  opacity: 0.9;
+}
+
+.cardBody {
+  padding: 1.25rem;
+  flex: 1;
+}
+
+.cardDescription {
+  color: var(--color-gray-600);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.progressSection {
+  margin-top: auto;
+}
+
+.progressLabel {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.progressStatus {
+  color: var(--color-gray-600);
+}
+
+.progressBar {
+  height: 6px;
+  background-color: var(--color-gray-200);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background-color: var(--color-primary);
+  border-radius: 3px;
+}
+
+.cardFooter {
+  padding: 1.25rem;
+  border-top: 1px solid var(--color-gray-200);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.statusBadge.completed {
+  background-color: rgba(67, 160, 71, 0.1);
+  color: var(--color-success);
+}
+
+.statusBadge.inProgress {
+  background-color: rgba(25, 118, 210, 0.1);
+  color: var(--color-primary);
+}
+
+.statusBadge.notStarted {
+  background-color: rgba(97, 97, 97, 0.1);
+  color: var(--color-gray-600);
+}
+
+.statusBadge.expired {
+  background-color: rgba(229, 57, 53, 0.1);
+  color: var(--color-danger);
+}
+
+/* Form Styles */
+.formContainer {
+  background: white;
+  border-radius: 8px;
+  box-shadow: var(--shadow-lg);
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.formHeader {
+  padding: 1.5rem;
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.formTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.formDescription {
+  font-size: 0.875rem;
+  opacity: 0.9;
+}
+
+.formProgress {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.formProgressBar {
+  flex: 1;
+  height: 6px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-right: 1rem;
+}
+
+.formProgressFill {
+  height: 100%;
+  background-color: white;
+  border-radius: 3px;
+}
+
+.formProgressText {
+  font-size: 0.875rem;
+  white-space: nowrap;
+}
+
+.formBody {
+  padding: 2rem;
+}
+
+.formSection {
+  margin-bottom: 2.5rem;
+}
+
+.sectionTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-gray-900);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.questionItem {
+  margin-bottom: 2rem;
+}
+
+.questionItem:last-child {
+  margin-bottom: 0;
+}
+
+.questionHeader {
+  margin-bottom: 1rem;
+}
+
+.questionText {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  display: flex;
+}
+
+.requiredMark {
+  color: var(--color-danger);
+  margin-left: 0.25rem;
+}
+
+.questionHelp {
+  font-size: 0.875rem;
+  color: var(--color-gray-600);
+}
+
+.inputGroup {
+  margin-bottom: 1.5rem;
+}
+
+.radioOptions,
+.checkboxOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.optionItem {
+  display: flex;
+  align-items: center;
+}
+
+.optionInput {
+  margin-right: 0.75rem;
+}
+
+.scale {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.scaleOption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 48px;
+}
+
+.scaleButton {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--color-gray-300);
+  background: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: 0.5rem;
+}
+
+.scaleButton:hover {
+  background: var(--color-gray-100);
+}
+
+.scaleButton.selected {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+.scaleLabel {
+  font-size: 0.75rem;
+  color: var(--color-gray-600);
+  text-align: center;
+}
+
+.textInput {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--color-gray-300);
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+
+.textArea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--color-gray-300);
+  border-radius: 4px;
+  font-size: 0.875rem;
+  min-height: 120px;
+  resize: vertical;
+}
+
+.fieldError {
+  color: var(--color-danger);
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.conditionalQuestion {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+  border-left: 2px solid var(--color-gray-200);
+}
+
+.formFooter {
+  padding: 1.5rem 2rem;
+  border-top: 1px solid var(--color-gray-200);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.autoSaveStatus {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--color-gray-600);
+}
+
+.saveStatus {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.saving {
+  background-color: var(--color-warning);
+}
+
+.saved {
+  background-color: var(--color-success);
+}
+
+.error {
+  background-color: var(--color-danger);
+}
+
+.navigationButtons {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Summary Page */
+.summaryContainer {
+  padding: 2rem;
+}
+
+.summaryHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.summaryTitle {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--color-gray-900);
+  margin-bottom: 0.5rem;
+}
+
+.summaryDescription {
+  color: var(--color-gray-600);
+}
+
+.summaryCard {
+  background: white;
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.responseSection {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.responseSection:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.responseQuestion {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.responseAnswer {
+  color: var(--color-gray-800);
+}
+
+.actionsRow {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* Dark Mode */
+.darkMode .title {
+  color: white;
+}
+
+.darkMode .tab {
+  color: var(--color-gray-400);
+}
+
+.darkMode .tabList {
+  border-bottom-color: var(--color-gray-700);
+}
+
+.darkMode .questionnaireCard,
+.darkMode .formContainer,
+.darkMode .summaryCard {
+  background-color: var(--color-gray-800);
+  color: white;
+}
+
+.darkMode .cardFooter,
+.darkMode .formFooter,
+.darkMode .responseSection {
+  border-color: var(--color-gray-700);
+}
+
+.darkMode .cardDescription,
+.darkMode .questionHelp,
+.darkMode .scaleLabel,
+.darkMode .autoSaveStatus,
+.darkMode .summaryDescription,
+.darkMode .progressStatus {
+  color: var(--color-gray-400);
+}
+
+.darkMode .progressBar {
+  background-color: var(--color-gray-700);
+}
+
+.darkMode .sectionTitle {
+  color: white;
+  border-bottom-color: var(--color-gray-700);
+}
+
+.darkMode .conditionalQuestion {
+  border-left-color: var(--color-gray-600);
+}
+
+.darkMode .textInput,
+.darkMode .textArea,
+.darkMode .scaleButton {
+  background-color: var(--color-gray-800);
+  border-color: var(--color-gray-600);
+  color: white;
+}
+
+.darkMode .scaleButton:hover {
+  background-color: var(--color-gray-700);
+}
+
+.darkMode .responseAnswer {
+  color: var(--color-gray-300);
+}
+
+@media (max-width: 768px) {
+  .formBody {
+    padding: 1rem;
+  }
+  
+  .scale {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .navigationButtons {
+    width: 100%;
+  }
+} 

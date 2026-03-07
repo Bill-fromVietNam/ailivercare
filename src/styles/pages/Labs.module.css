@@ -1,0 +1,464 @@
+.labsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-gray-900);
+}
+
+.actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.filtersRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
+}
+
+.filterLabel {
+  font-size: 0.875rem;
+  color: var(--color-gray-600);
+  margin-bottom: 0.25rem;
+}
+
+.filterSelect {
+  padding: 0.5rem;
+  border: 1px solid var(--color-gray-300);
+  border-radius: 4px;
+  font-size: 0.875rem;
+  color: var(--color-gray-800);
+  background-color: white;
+}
+
+.searchInput {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-gray-300);
+  border-radius: 4px;
+  font-size: 0.875rem;
+  color: var(--color-gray-800);
+  width: 100%;
+  max-width: 300px;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .contentGrid {
+    grid-template-columns: 1fr 350px;
+  }
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.labsSection {
+  background: white;
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.sectionHeader {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--color-gray-200);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sectionTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-gray-800);
+}
+
+.viewOptions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.viewButton {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--color-gray-300);
+  border-radius: 4px;
+  font-size: 0.75rem;
+  background: white;
+  color: var(--color-gray-600);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.viewButton:hover {
+  background: var(--color-gray-100);
+}
+
+.viewButton.active {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+.tableWrapper {
+  overflow-x: auto;
+}
+
+.labsTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.labsTable th,
+.labsTable td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--color-gray-200);
+  font-size: 0.875rem;
+}
+
+.labsTable th {
+  background-color: var(--color-gray-50);
+  font-weight: 600;
+  color: var(--color-gray-700);
+}
+
+.labsTable tbody tr:hover {
+  background-color: var(--color-gray-50);
+}
+
+.valueCell {
+  font-weight: 500;
+}
+
+.normalValue {
+  color: var(--color-success);
+}
+
+.warningValue {
+  color: var(--color-warning);
+}
+
+.criticalValue {
+  color: var(--color-danger);
+}
+
+.dateCell {
+  color: var(--color-gray-600);
+  white-space: nowrap;
+}
+
+.labNameCell {
+  font-weight: 500;
+}
+
+.labName {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.labIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1rem;
+}
+
+.chartsSection {
+  padding: 1.5rem;
+}
+
+.chartContainer {
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.chartHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.chartTitle {
+  font-weight: 600;
+  color: var(--color-gray-800);
+}
+
+.chartOptions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.chart {
+  height: 300px;
+  width: 100%;
+}
+
+.referenceLines {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.referenceLine {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--color-gray-600);
+}
+
+.referenceColor {
+  width: 12px;
+  height: 4px;
+  border-radius: 2px;
+}
+
+.refHigh {
+  background-color: var(--color-danger);
+}
+
+.refLow {
+  background-color: var(--color-warning);
+}
+
+.refNormal {
+  background-color: var(--color-success);
+}
+
+.sidebarContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.detailsCard {
+  background: white;
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.detailsHeader {
+  padding: 1rem 1.5rem;
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.detailsTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.detailsDate {
+  font-size: 0.875rem;
+  opacity: 0.9;
+}
+
+.detailsBody {
+  padding: 1.5rem;
+}
+
+.detailsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.detailItem {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+}
+
+.detailLabel {
+  color: var(--color-gray-600);
+}
+
+.detailValue {
+  font-weight: 500;
+}
+
+.infoCard {
+  background: white;
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+  padding: 1.5rem;
+}
+
+.infoTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-gray-800);
+  margin-bottom: 1rem;
+}
+
+.infoContent {
+  font-size: 0.875rem;
+  color: var(--color-gray-600);
+  line-height: 1.6;
+}
+
+.infoList {
+  margin-top: 0.75rem;
+  padding-left: 1.5rem;
+  list-style-type: disc;
+}
+
+.infoList li {
+  margin-bottom: 0.5rem;
+}
+
+.paginationBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--color-gray-200);
+}
+
+.pageInfo {
+  font-size: 0.875rem;
+  color: var(--color-gray-600);
+}
+
+.paginationControls {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.pageButton {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-gray-300);
+  border-radius: 4px;
+  font-size: 0.875rem;
+  color: var(--color-gray-700);
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.pageButton:hover {
+  background: var(--color-gray-100);
+}
+
+.pageButton.active {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+.pageButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Dark Mode */
+.darkMode .title {
+  color: white;
+}
+
+.darkMode .labsSection,
+.darkMode .detailsCard,
+.darkMode .infoCard {
+  background-color: var(--color-gray-800);
+  color: white;
+}
+
+.darkMode .sectionHeader,
+.darkMode .paginationBar {
+  border-color: var(--color-gray-700);
+}
+
+.darkMode .labsTable th {
+  background-color: var(--color-gray-900);
+  color: var(--color-gray-300);
+}
+
+.darkMode .labsTable td {
+  border-color: var(--color-gray-700);
+}
+
+.darkMode .labsTable tbody tr:hover {
+  background-color: var(--color-gray-700);
+}
+
+.darkMode .sectionTitle,
+.darkMode .chartTitle,
+.darkMode .infoTitle {
+  color: white;
+}
+
+.darkMode .dateCell,
+.darkMode .detailLabel,
+.darkMode .infoContent,
+.darkMode .pageInfo,
+.darkMode .filterLabel {
+  color: var(--color-gray-400);
+}
+
+.darkMode .viewButton,
+.darkMode .pageButton {
+  background-color: var(--color-gray-700);
+  border-color: var(--color-gray-600);
+  color: var(--color-gray-300);
+}
+
+.darkMode .filterSelect,
+.darkMode .searchInput {
+  background-color: var(--color-gray-800);
+  border-color: var(--color-gray-600);
+  color: white;
+}
+
+.darkMode .viewButton:hover,
+.darkMode .pageButton:hover {
+  background-color: var(--color-gray-600);
+}
+
+@media (max-width: 768px) {
+  .filtersRow {
+    flex-direction: column;
+  }
+  
+  .searchInput {
+    max-width: none;
+  }
+} 

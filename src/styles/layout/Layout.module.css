@@ -1,0 +1,224 @@
+/* Layout container */
+.layoutContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-primary);
+}
+
+/* Header */
+.header {
+  background-color: var(--background-elevated);
+  box-shadow: var(--shadow-sm);
+  padding: 0 24px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid var(--border-light);
+}
+
+/* Logo */
+.logo {
+  margin-right: 24px;
+}
+
+.logoLink {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-size: 1.4rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+
+.logoText {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+}
+
+/* Desktop Navigation */
+.desktopNav {
+  display: none;
+  align-items: center;
+  flex-grow: 1;
+  height: 100%;
+}
+
+/* Nav Links */
+.navLink, .activeLink {
+  color: var(--text-secondary);
+  padding: 8px 16px;
+  margin: 0 2px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.navLink:hover {
+  background-color: var(--background-inset);
+  color: var(--text-primary);
+}
+
+.activeLink {
+  background-color: var(--primary-color-light);
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.navLinkWithBadge {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Right section - User info, theme toggle */
+.rightSection {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.userInfo {
+  display: none;
+  align-items: center;
+  margin-right: 16px;
+}
+
+.userName {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-right: 10px;
+}
+
+.logoutButton {
+  background: none;
+  border: 1px solid var(--border-medium);
+  color: var(--text-primary);
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+}
+
+.logoutButton:hover {
+  background-color: var(--background-inset);
+}
+
+.themeToggleWrapper {
+  margin-left: 16px;
+  display: none;
+}
+
+/* Main content */
+.mainContent {
+  flex: 1;
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--background-secondary);
+  padding: 16px 0;
+  border-top: 1px solid var(--border-light);
+  margin-top: auto;
+}
+
+.footerContent {
+  text-align: center;
+  color: var(--text-tertiary);
+  font-size: 0.85rem;
+}
+
+.adminMenuContainer {
+  margin-left: 1.5rem;
+  position: relative;
+}
+
+.adminLink {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  color: #1976d2;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  background-color: rgba(25, 118, 210, 0.1);
+}
+
+.adminLink:hover {
+  background-color: rgba(25, 118, 210, 0.15);
+}
+
+.activeAdminLink {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  background-color: #1976d2;
+}
+
+.adminBadge {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: white;
+  background-color: #1976d2;
+  border-radius: 12px;
+  margin-left: 0.5rem;
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+  .desktopNav {
+    display: flex;
+  }
+  
+  .userInfo {
+    display: flex;
+  }
+  
+  .themeToggleWrapper {
+    display: block;
+  }
+  
+  .mainContent {
+    padding: 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    padding: 0 40px;
+  }
+  
+  .mainContent {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header {
+    justify-content: center;
+    padding: 0 16px;
+  }
+  
+  .logo {
+    margin-right: 0;
+  }
+} 

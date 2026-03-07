@@ -1,0 +1,445 @@
+.hero-features-grid {
+  margin-top: 32px;
+}
+.feature-card-sm { position: relative; overflow: hidden; }
+.feature-card-sm .feature-desc { opacity: 1; height: auto; margin-top: 6px; transition: none; }
+.feature-card-sm:hover .feature-desc { opacity: 1; height: auto; }
+.hero-actions {
+  display: flex;
+  align-items: center; /* vertical center align */
+  justify-content: flex-end; /* push row toward image (right) */
+  gap: 32px;
+  margin-top: 12px;
+  width: 100%;
+}
+.promo-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center promo items */
+  gap: 14px; /* spacing between label/percent and button */
+  padding-top: 1px; /* prevent margin-collapsing from child */
+  min-width: 260px; /* ensure enough width for 50% */
+  flex-shrink: 0; /* don't shrink when row gets tight */
+}
+.promo-column .ant-btn {
+  margin: 0 !important; /* avoid margin overlay */
+  display: inline-flex;
+}
+.hero-features { margin-top: 0; display: flex; justify-content: flex-start; }
+.hero-features .ant-space-vertical { width: 340px; }
+/* Landing page styles adapted to M10 template structure */
+
+.landing-hero {
+  padding: 72px 24px;
+  background-color: #f7fbff;
+  background-image: url('/nen.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative; /* enable overlay */
+}
+.landing-hero:before {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; top: 0; bottom: 0;
+  background: rgba(255,255,255,0.30); /* brighten background for readability */
+  pointer-events: none;
+  z-index: 0;
+}
+.landing-hero > .ant-row { position: relative; z-index: 1; }
+.landing-hero .ant-typography { color: #1f1f1f; }
+
+.landing-hero-title {
+  font-weight: 800;
+  margin: 0 0 12px 0;
+  letter-spacing: -0.02em;
+}
+
+/* Hero custom fonts & accents */
+.hero-accent {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  color: #8a7a3d;
+  font-weight: 700;
+}
+.hero-main {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 800;
+  color: #2f2f2f;
+  text-shadow: 0 2px 0 rgba(0,0,0,0.02);
+}
+
+.landing-hero-subtitle {
+  color: #2f2f2f;
+  margin-bottom: 16px;
+  font-size: 18px;
+  line-height: 1.7;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  letter-spacing: -0.01em;
+}
+
+.landing-hero-logos {
+  margin-top: 16px;
+}
+.landing-hero .ant-col:first-child {
+  max-width: 780px;
+}
+.landing-hero .ant-col:first-child .ant-typography + .ant-space {
+  margin-top: 12px;
+}
+.landing-hero-logos .ant-typography {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+.landing-hero-logos .anticon {
+  font-size: 18px;
+}
+
+.landing-section {
+  padding: 56px 24px;
+}
+
+.landing-section.alt {
+  background: #fafafa;
+}
+
+.landing-feature-card .ant-card-head-title {
+  font-weight: 600;
+}
+
+.landing-quiz-card {
+  border-radius: 12px;
+}
+
+.landing-benefits {
+  margin-top: 8px;
+}
+
+.landing-footer {
+  text-align: center;
+  background-color: #f7fbff;
+  background-image: url('/nen.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-top: 0;
+  color: #3a2c11;
+}
+
+
+/* Extended sections for M10-like layout */
+.landing-services .ant-card {
+  height: 100%;
+}
+
+.landing-section .ant-card {
+  border-radius: 10px;
+}
+
+
+/* Countdown styles */
+.landing-countdown .countdown-card {
+  background: #0f3d5e;
+  color: #fff;
+  border: none;
+  box-shadow: 0 16px 40px rgba(15,61,94,0.3);
+}
+.landing-countdown .ant-typography,
+.landing-countdown .ant-statistic-content {
+  color: #fff !important;
+}
+.countdown-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0;
+}
+
+/* Feature grid */
+.feature-grid .feature-card {
+  transition: none;
+  border: 1px solid rgba(0,0,0,0.05);
+  background: #fff7e6; /* off-white, less bright */
+  box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+  padding-bottom: 6px;
+}
+.feature-grid .feature-card:hover {
+  transform: none;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+/* Max width container behavior for rows */
+.landing-hero > .ant-row,
+.landing-section > .ant-row {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Make hero row full-bleed so media can align flush right */
+.landing-hero > .ant-row {
+  max-width: 100%;
+  padding: 0 24px;
+}
+
+/* Cards spacing */
+.landing-section .ant-col {
+  display: flex;
+}
+.landing-section .ant-card {
+  width: 100%;
+}
+
+/* Responsive tweaks */
+@media (max-width: 991px) {
+  .landing-hero { padding: 56px 20px; }
+  .landing-hero-title { font-size: 28px; }
+}
+@media (min-width: 992px) {
+  .landing-hero-title { font-size: 36px; }
+}
+
+/* Compact features layout to keep above the fold */
+.compact-features { padding-top: 32px; padding-bottom: 24px; }
+.compact-features .feature-title { font-size: 22px; }
+.compact-features .feature-card .ant-card-head-title { font-size: 16px; }
+.compact-features .ant-card-body { padding: 12px 16px 16px 16px; }
+.feature-grid { max-width: 100%; width: 100%; margin: 0; padding: 0 24px; }
+.feature-grid .ant-col { display: flex; }
+.feature-grid .ant-card { width: 100%; }
+
+@media (min-width: 1200px) {
+  .feature-grid > .ant-col { flex: 0 0 20%; max-width: 20%; }
+}
+
+/* Emphasize main 3 features */
+.feature-grid-main > .ant-col { flex: 0 0 33.3333%; max-width: 33.3333%; }
+.feature-card-main .ant-card-head-title {
+  font-size: 18px;
+  font-weight: 800;
+}
+.feature-card-sm .ant-card-head-title { font-size: 15px; }
+/* widths are controlled via Col props in JSX now */
+.secondary-feature-grid > .ant-col { flex: 0 0 auto; max-width: none; }
+
+/* allow responsive wrapping per grid breakpoints */
+@media (max-width: 1199px) {
+  .secondary-feature-grid > .ant-col { flex: 0 0 auto; max-width: none; }
+}
+
+/* Force all feature items in one horizontal row with scroll */
+.secondary-feature-grid {
+  flex-wrap: wrap; /* put under both columns and allow multiple rows */
+  overflow: visible;
+  gap: 14px;
+  padding-bottom: 8px;
+}
+.secondary-feature-grid > .ant-col { flex: 0 0 16.6667%; max-width: 16.6667%; }
+.feature-card-sm { width: 100%; }
+.feature-card-sm .ant-card-head { min-height: 36px; padding: 0 10px; }
+.feature-card-sm .ant-card-head-title { font-size: 13px; padding: 8px 0; }
+.feature-card-sm .ant-card-body { display: none; }
+
+/* Top promo bar */
+.landing-topbar {
+  background: #6b572a;
+  color: #fff;
+  padding: 10px 24px;
+}
+.landing-topbar .ant-typography,
+.landing-topbar .ant-btn { color: #fff; }
+.landing-topbar .topbar-cta {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.6);
+}
+
+/* Hero media area with countdown overlay */
+.hero-media {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #f2efe9;
+  min-height: 300px;
+  width: 90%;
+  max-width: 420px;
+  margin-left: auto; /* keep aligned to the right column edge */
+  margin-right: 70px; /* nudge a bit to the left */
+}
+.hero-media:after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; top: 0; bottom: 0;
+  background: rgba(0,0,0,0.10); /* darken to stand out from page background */
+  z-index: 1;
+  pointer-events: none;
+}
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: inherit;
+  position: relative;
+  z-index: 0;
+}
+.landing-hero .ant-col:nth-child(2) {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1 1 auto;
+  padding-right: 0;
+  margin-right: 0;
+}
+.hero-media { width: 100%; }
+.hero-image-placeholder {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(0,0,0,0.45);
+}
+.hero-features { margin-top: 4px; display: flex; justify-content: flex-end; }
+.hero-features .ant-space-vertical { width: 340px; }
+.hero-feature-card .ant-card-head { border: 0; }
+.hero-feature-card .ant-card-head-title { font-weight: 700; font-size: 16px; }
+.hero-feature-card .ant-card-body { display: none; }
+
+/* Vertical pill buttons for hero features */
+.hero-feature-pill .ant-card-head {
+  border: 0;
+  background: #fff7e6; /* softer than pure white */
+  border-radius: 999px;
+}
+.hero-feature-pill .ant-card-head-title {
+  font-weight: 700;
+  font-size: 15px;
+}
+.hero-feature-pill {
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 999px !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.hero-feature-pill .ant-card-body { display: none; }
+.hero-countdown {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  background: rgba(255, 247, 230, 0.95);
+  border-radius: 12px;
+  padding: 10px 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  z-index: 2; /* ensure above dark overlay */
+}
+.hero-countdown-box .ant-statistic-content {
+  font-weight: 700;
+  color: #6b572a;
+}
+
+/* Promo block matching template */
+.promo-block { margin: 6px 0 6px 0; display: flex; flex-direction: column; align-items: center; text-align: center; }
+.promo-label {
+  display: inline-block;
+  background: #6b572a;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 4px;
+  letter-spacing: .08em;
+  user-select: none;
+}
+.promo-percent {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 96px;
+  font-weight: 800;
+  line-height: 1;
+  background: linear-gradient(180deg, #f8e7b5 0%, #e3b84e 70%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 8px 20px rgba(227,184,78,0.35);
+  letter-spacing: -1px;
+  user-select: none;
+  white-space: nowrap;
+}
+
+@media (min-width: 1200px) {
+  .hero-media { min-height: 460px; width: 100%; }
+}
+
+/* Brand accent: gold primary button inside landing */
+.landing-hero .ant-btn-primary,
+.landing-section .ant-btn-primary {
+  background: linear-gradient(180deg, #f1d18a 0%, #e3b84e 70%);
+  border: 0;
+  color: #3a2c11;
+  box-shadow: 0 8px 20px rgba(227,184,78,0.35);
+  border-radius: 999px;
+  padding: 12px 22px;
+  font-weight: 700;
+}
+.landing-hero .ant-btn-primary:hover,
+.landing-section .ant-btn-primary:hover {
+  filter: brightness(1.06);
+}
+
+/* Typography polish */
+.landing-section h3.ant-typography,
+.landing-section h4.ant-typography,
+.landing-hero .ant-typography {
+  letter-spacing: -0.01em;
+}
+.landing-hero .ant-typography.ant-typography-secondary {
+  color: rgba(0,0,0,0.58);
+}
+
+/* Testimonials */
+.landing-section.alt .ant-card p {
+  font-style: italic;
+}
+.landing-section.alt .ant-card .ant-typography-strong {
+  display: block;
+  margin-top: 6px;
+}
+
+/* FAQ Collapse */
+.ant-collapse > .ant-collapse-item > .ant-collapse-header {
+  background: #fffaf0;
+  border-radius: 8px;
+}
+.ant-collapse > .ant-collapse-item {
+  border: 0;
+  margin-bottom: 10px;
+}
+.ant-collapse-content {
+  border: 0;
+  background: #fff;
+  border-radius: 8px;
+}
+
+/* Feature card headings */
+.feature-card .ant-card-head {
+  border: 0;
+}
+.feature-card .ant-card-head-title {
+  font-weight: 700;
+}
+
+/* Topbar CTA hover */
+.landing-topbar .topbar-cta:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* Hero badges (optional placeholder) */
+.hero-media:after {
+  content: '';
+  position: absolute;
+  right: -30px;
+  top: -30px;
+  width: 160px;
+  height: 160px;
+  background: radial-gradient(closest-side, rgba(227,184,78,0.35), transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+
