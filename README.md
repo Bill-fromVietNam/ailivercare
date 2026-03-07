@@ -1,7 +1,6 @@
-# LiverCare - Frontend
+# AILiverCare
 
-Dự án frontend cho hệ thống quản lý sức khỏe gan LiverCare, được xây dựng bằng React, TypeScript và Vite.
-
+Built by using React, TypeSCript and Vite. The project "AILiverCare" has its mission to improve Livercare health management system.
 ## Tính năng chính
 
 - **Dashboard**: Tổng quan về sức khỏe gan với biểu đồ và thống kê
