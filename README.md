@@ -1,65 +1,65 @@
 # AILiverCare
 
 Built by using React, TypeSCript and Vite. The project "AILiverCare" has its mission to improve Livercare health management system.
-## Tính năng chính
+## Main features:
 
-- **Dashboard**: Tổng quan về sức khỏe gan với biểu đồ và thống kê
-- **Assessments**: Đánh giá rủi ro sức khỏe gan với quy trình từng bước
-- **Appointments**: Quản lý cuộc hẹn với bác sĩ qua lịch trực quan
-- **Labs**: Theo dõi kết quả xét nghiệm với biểu đồ theo thời gian
-- **Questionnaires**: Bảng câu hỏi đánh giá với lưu trữ tự động
-- **Notifications**: Hệ thống thông báo theo danh mục và mức độ ưu tiên
-- **Dark Mode**: Chế độ tối với khả năng lưu trữ lựa chọn
+- **Dashboard**: Overview of Liver Health with charts and statistic
+- **Assessments**: Assessing Liver Health risks with step-by-step process
+- **Appointments**: Manage Doctor Appointments through Visual Calendar
+- **Labs**: Track your test result with a graph overtime
+- **Questionnaires**: The assessment questionnaire with automatic save
+- **Notifications**: Notification system based on categories and priority levels  
+- **Dark Mode**: Dark mode with the customizable store options
 
-## Yêu cầu
+## Requirement:
 
-- Node.js 14+ (khuyến nghị 16+)
-- npm hoặc yarn
-- Backend API (xem README.md ở thư mục gốc)
+- Node.js 14+ (16+ only)
+- npm or yarn
+- Backend API (take a look README.md in the original folder)
 
-## Cài đặt
+## Settings:
 
-1. Clone dự án
+1. Clone project
 ```
 git clone <repository-url>
 ```
 
-2. Di chuyển vào thư mục frontend
+2. Move to the fronted folder
 ```
 cd frontend
 ```
 
-3. Cài đặt các dependencies
+3. install dependencies
 ```
 npm install
 ```
 
-4. Sao chép file cấu hình mẫu
+4. Copy the sample configuration file
 ```
 cp .env.example .env
 ```
 
-5. Cập nhật cấu hình trong `.env` theo môi trường của bạn
+5. Update the configuration in `.env` according to your environment
 
-## Phát triển
+## Improvement:
 
-Chạy môi trường phát triển:
+Launch the development environment
 ```
 npm run dev
 ```
 
-Ứng dụng sẽ chạy tại địa chỉ [http://localhost:5173](http://localhost:5173)
+The application will launch in this adress: [http://localhost:5173](http://localhost:5173)
 
-## Xây dựng (Build)
+## Build:
 
-Build ứng dụng cho môi trường production:
+Build the application for environment production:
 ```
 npm run build
 ```
 
-Các file được tạo ra sẽ ở thư mục `dist`
+All the generated folder will be in the folder `dist`
 
-## Cấu trúc dự án
+## The project structure:
 
 ```
 frontend/
@@ -67,54 +67,54 @@ frontend/
   │  ├─ api/          # API services
   │  ├─ components/   # Shared components
   │  ├─ hooks/        # Custom hooks
-  │  ├─ pages/        # UI cho từng trang
+  │  ├─ pages/        # UI for it pages
   │  ├─ store/        # Redux store, slices
-  │  ├─ styles/       # CSS modules và global CSS
-  │  ├─ utils/        # Utilities và helpers
-  │  ├─ App.tsx       # Component gốc
+  │  ├─ styles/       # CSS modules and global CSS
+  │  ├─ utils/        # Utilities and helpers
+  │  ├─ App.tsx       # Original Component 
   │  └─ main.tsx      # Entry point
   ├─ public/          # Static assets
-  ├─ .env.example     # Cấu hình mẫu
+  ├─ .env.example     # sample configuration
   ├─ index.html       # HTML template
-  ├─ vite.config.ts   # Cấu hình Vite
-  └─ package.json     # Dependencies và scripts
+  ├─ vite.config.ts   #  Vite Config
+  └─ package.json     # Dependencies and scripts
 ```
 
-## Công nghệ sử dụng
+## All used Technologies:
 
-- **React**: Thư viện UI
-- **TypeScript**: Đảm bảo type safety
-- **Redux Toolkit**: Quản lý state
+- **React**: UI Libary
+- **TypeScript**: ensure type safety
+- **Redux Toolkit**:  state management
 - **Axios**: HTTP requests
-- **Chart.js**: Hiển thị biểu đồ
+- **Chart.js**: Show charts
 - **React Router**: Client-side routing
 - **React-Big-Calendar**: Calendar component
-- **CSS Modules**: Styling scoped tới component
+- **CSS Modules**: Styling scoped to component
 
 ## API Integration
 
-Tất cả các API services được định nghĩa trong thư mục `src/api`. Mỗi service tương ứng với một module backend:
+All API services will be defined in the folder `src/api`.Each service corresponds to one module backend:
 
-- `auth.ts`: Xác thực người dùng
-- `assessments.ts`: API đánh giá rủi ro
-- `appointments.ts`: Quản lý cuộc hẹn
-- `labs.ts`: Kết quả xét nghiệm
-- `questionnaires.ts`: Bảng câu hỏi
-- `notifications.ts`: Thông báo
+- `auth.ts`: indentifies user
+- `assessments.ts`: API assess all risks
+- `appointments.ts`: manage the appointment
+- `labs.ts`: Test results
+- `questionnaires.ts`: Questionnaires
+- `notifications.ts`: Notification
 
 ## Responsive Design
 
-- **Desktop**: Hiển thị đầy đủ với menu ngang
-- **Tablet**: Layout thích ứng
-- **Mobile**: Menu toggle và UI tối ưu cho màn hình nhỏ
+- **Desktop**: Display in full with horizontal menu
+- **Tablet**: Suitable Layout 
+- **Mobile**: Menu toggle and UI optimize for small screen
 
 ## Best Practices
 
-- **Dark Mode**: Áp dụng trên toàn hệ thống với CSS variables
-- **Modular CSS**: Mỗi component có CSS modules riêng
-- **API Service Layer**: Tách biệt logic API và UI
-- **Authentication Flow**: Xử lý refresh token và token expiry
-- **Performance**: Lazy loading và code splitting
+- **Dark Mode**: Apply system-wide with CSS variables
+- **Modular CSS**: Each component have different CSS modules 
+- **API Service Layer**: Seperate logic API and UI
+- **Authentication Flow**: Handling refresh token and token expiry
+- **Performance**: Lazy loading and code splitting
 
 ## License
 
