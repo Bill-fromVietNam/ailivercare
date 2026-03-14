@@ -1,0 +1,356 @@
+.container {
+  padding: 24px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 32px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text-primary, #111827);
+}
+
+.description {
+  color: var(--text-secondary, #4b5563);
+  font-size: 16px;
+}
+
+.accessDenied {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  text-align: center;
+}
+
+.accessDenied h1 {
+  color: var(--text-primary, #111827);
+  margin-bottom: 16px;
+}
+
+.accessDenied button {
+  margin-top: 16px;
+  padding: 8px 16px;
+  background-color: var(--primary-color, #3b82f6);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 1px solid var(--border-color, #e5e7eb);
+  margin-bottom: 24px;
+  overflow-x: auto;
+}
+
+.tabButton {
+  padding: 12px 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-secondary, #4b5563);
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+}
+
+.tabButton.active {
+  color: var(--primary-color, #3b82f6);
+  border-bottom-color: var(--primary-color, #3b82f6);
+}
+
+.tabButton:hover {
+  color: var(--text-primary, #111827);
+  background-color: var(--background-hover, #f9fafb);
+}
+
+.content {
+  padding: 16px 0;
+}
+
+/* Dashboard stats */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.statCard {
+  background: var(--background-card, white);
+  border: 1px solid var(--border-color, #e5e7eb);
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
+}
+
+.statCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.statIcon {
+  font-size: 28px;
+  margin-right: 16px;
+  background: var(--background-secondary, #f3f4f6);
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.statInfo {
+  flex-grow: 1;
+}
+
+.statInfo h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+  color: var(--text-primary, #111827);
+}
+
+.statInfo p {
+  font-size: 14px;
+  color: var(--text-secondary, #4b5563);
+  margin: 0;
+}
+
+/* User activity section */
+.userActivitySection {
+  margin-bottom: 32px;
+}
+
+.filterBar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding: 16px;
+  background-color: var(--background-secondary, #f3f4f6);
+  border-radius: 8px;
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.filterGroup label {
+  font-size: 14px;
+  margin-bottom: 4px;
+  color: var(--text-secondary, #4b5563);
+}
+
+.filterGroup select, 
+.filterGroup input {
+  padding: 8px 12px;
+  border: 1px solid var(--border-color, #e5e7eb);
+  border-radius: 4px;
+  font-size: 14px;
+  min-width: 150px;
+}
+
+.filterButton {
+  align-self: flex-end;
+  padding: 8px 16px;
+  background-color: var(--primary-color, #3b82f6);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  height: 38px;
+  margin-top: auto;
+}
+
+/* Activity table */
+.activityTable {
+  overflow-x: auto;
+  margin-top: 16px;
+}
+
+.activityTable table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.activityTable th {
+  background-color: var(--background-secondary, #f3f4f6);
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-secondary, #4b5563);
+}
+
+.activityTable td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-color, #e5e7eb);
+  font-size: 14px;
+}
+
+.activityTable tr:hover {
+  background-color: var(--background-hover, #f9fafb);
+}
+
+/* Questionnaire rates */
+.questionnaireRatesSection {
+  margin-bottom: 32px;
+}
+
+.ratesTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+.ratesTable th {
+  background-color: var(--background-secondary, #f3f4f6);
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-secondary, #4b5563);
+}
+
+.ratesTable td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-color, #e5e7eb);
+  font-size: 14px;
+}
+
+.ratesTable tr:hover {
+  background-color: var(--background-hover, #f9fafb);
+}
+
+/* Export report section */
+.exportSection {
+  margin-bottom: 32px;
+}
+
+.exportForm {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 24px;
+  background-color: var(--background-secondary, #f3f4f6);
+  padding: 24px;
+  border-radius: 8px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup label {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: var(--text-secondary, #4b5563);
+}
+
+.formGroup select, 
+.formGroup input {
+  padding: 10px;
+  border: 1px solid var(--border-color, #e5e7eb);
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.exportButton {
+  padding: 12px 20px;
+  background-color: var(--primary-color, #3b82f6);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 15px;
+  align-self: flex-end;
+  height: 42px;
+  margin-top: auto;
+  grid-column: 1 / -1;
+}
+
+.exportButton:disabled {
+  background-color: var(--background-disabled, #d1d5db);
+  cursor: not-allowed;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 0;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--border-color, #e5e7eb);
+  border-top: 3px solid var(--primary-color, #3b82f6);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 16px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.noData {
+  text-align: center;
+  padding: 40px;
+  color: var(--text-secondary, #6b7280);
+  font-style: italic;
+  background-color: var(--background-secondary, #f3f4f6);
+  border-radius: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .statsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  
+  .exportForm {
+    grid-template-columns: 1fr;
+  }
+  
+  .tabButton {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .filterBar {
+    flex-direction: column;
+  }
+  
+  .filterButton {
+    width: 100%;
+  }
+} 

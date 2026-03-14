@@ -1,0 +1,353 @@
+.container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.titleSection {
+  flex-grow: 1;
+}
+
+.title {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+.description {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  max-width: 600px;
+}
+
+.createButton {
+  padding: 10px 16px;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+}
+
+.createButton:hover {
+  background-color: var(--accent-color-dark);
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+  color: var(--text-secondary);
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--background-secondary);
+  border-top-color: var(--accent-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 16px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.emptyState {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: var(--background-secondary);
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.emptyStateIcon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+}
+
+.emptyState h2 {
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  font-size: 1.5rem;
+}
+
+.emptyState p {
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+}
+
+.createEmptyButton {
+  padding: 12px 24px;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.createEmptyButton:hover {
+  background-color: var(--accent-color-dark);
+}
+
+.templatesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.templateCard {
+  background-color: var(--background-primary);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-color);
+}
+
+.templateCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.templateHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background-color: var(--background-secondary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.templateStatus {
+  display: flex;
+  flex-direction: column;
+}
+
+.statusBadge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.active {
+  background-color: var(--success-color-light);
+  color: var(--success-color);
+}
+
+.draft {
+  background-color: var(--warning-color-light);
+  color: var(--warning-color);
+}
+
+.archived {
+  background-color: var(--muted-color-light);
+  color: var(--muted-color);
+}
+
+.submissionCount {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.templateActions {
+  display: flex;
+  gap: 4px;
+}
+
+.toggleStatusButton,
+.editButton,
+.deleteButton {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.toggleStatusButton:hover {
+  background-color: var(--background-hover);
+}
+
+.editButton:hover {
+  background-color: var(--accent-color-light);
+}
+
+.deleteButton:hover:not(:disabled) {
+  background-color: var(--error-color-light);
+}
+
+.deleteButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.templateTitle {
+  padding: 16px 16px 8px;
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--text-primary);
+}
+
+.templateDescription {
+  padding: 0 16px 16px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.templateMeta {
+  padding: 12px 16px;
+  background-color: var(--background-secondary);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  font-size: 0.8rem;
+}
+
+.metaItem {
+  display: flex;
+  gap: 4px;
+}
+
+.metaLabel {
+  color: var(--text-secondary);
+}
+
+.metaValue {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.templateFooter {
+  padding: 12px 16px;
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+}
+
+.viewResultsButton,
+.previewButton {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+}
+
+.viewResultsButton {
+  background-color: var(--accent-color);
+  color: white;
+  border-color: var(--accent-color);
+}
+
+.viewResultsButton:hover:not(:disabled) {
+  background-color: var(--accent-color-dark);
+}
+
+.viewResultsButton:disabled {
+  background-color: var(--background-secondary);
+  color: var(--text-muted);
+  border-color: var(--border-color);
+  cursor: not-allowed;
+}
+
+.previewButton {
+  background-color: var(--background-primary);
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.previewButton:hover {
+  background-color: var(--accent-color-light);
+}
+
+.editorWrapper {
+  height: calc(100vh - 60px);
+  padding: 0;
+  max-width: none;
+}
+
+.accessDenied {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.accessDenied h1 {
+  color: var(--error-color);
+  margin-bottom: 16px;
+}
+
+.accessDenied p {
+  margin-bottom: 24px;
+  color: var(--text-secondary);
+}
+
+.accessDenied button {
+  padding: 10px 16px;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .createButton {
+    margin-top: 12px;
+    width: 100%;
+  }
+  
+  .templatesGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .templateMeta {
+    grid-template-columns: 1fr;
+  }
+  
+  .templateFooter {
+    flex-direction: column;
+  }
+} 

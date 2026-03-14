@@ -1,0 +1,500 @@
+.container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.titleSection {
+  flex-grow: 1;
+}
+
+.title {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+.description {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  max-width: 600px;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.statCard {
+  background-color: var(--background-secondary);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid var(--border-color);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.statCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.statValue {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  margin-bottom: 8px;
+}
+
+.statLabel {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding: 16px;
+  background-color: var(--background-secondary);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  align-items: center;
+}
+
+.filterGroup {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filterGroup label {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.filterGroup select {
+  padding: 8px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+  min-width: 160px;
+}
+
+.searchForm {
+  display: flex;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.searchInput {
+  padding: 8px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+  width: 250px;
+}
+
+.searchButton {
+  padding: 8px 12px;
+  background-color: var(--background-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.tableContainer {
+  overflow-x: auto;
+  margin-bottom: 24px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+.usersTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.usersTable th,
+.usersTable td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.usersTable th {
+  background-color: var(--background-secondary);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.usersTable tr:last-child td {
+  border-bottom: none;
+}
+
+.usersTable tbody tr {
+  transition: background-color 0.2s;
+}
+
+.usersTable tbody tr:hover {
+  background-color: var(--background-hover);
+}
+
+.roleSelector {
+  position: relative;
+}
+
+.roleSelect {
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  width: 100%;
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.user {
+  color: var(--text-primary);
+}
+
+.admin {
+  color: var(--accent-color);
+  font-weight: 500;
+}
+
+.doctor {
+  color: var(--success-color);
+  font-weight: 500;
+}
+
+.statusBadge,
+.verificationBadge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.active {
+  background-color: var(--success-color-light);
+  color: var(--success-color);
+  cursor: pointer;
+}
+
+.inactive {
+  background-color: var(--error-color-light);
+  color: var(--error-color);
+  cursor: pointer;
+}
+
+.verified {
+  background-color: var(--success-color-light);
+  color: var(--success-color);
+}
+
+.unverified {
+  background-color: var(--warning-color-light);
+  color: var(--warning-color);
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.actionButton {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: var(--background-secondary);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.editButton:hover {
+  background-color: var(--accent-color-light);
+}
+
+.deleteButton:hover {
+  background-color: var(--error-color-light);
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+  color: var(--text-secondary);
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--background-secondary);
+  border-top-color: var(--accent-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 16px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.emptyState {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: var(--background-secondary);
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.emptyStateIcon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+}
+
+.emptyState h2 {
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  font-size: 1.5rem;
+}
+
+.emptyState p {
+  color: var(--text-secondary);
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.paginationButton {
+  padding: 8px 16px;
+  background-color: var(--background-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.paginationButton:hover:not(:disabled) {
+  background-color: var(--background-hover);
+}
+
+.paginationButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pageInfo {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* Modal styles */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: var(--background-primary);
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.modalHeader h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: var(--text-primary);
+}
+
+.closeButton {
+  background: transparent;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+}
+
+.modalForm {
+  padding: 20px;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.formGroup input,
+.formGroup select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+}
+
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.cancelButton,
+.saveButton {
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.cancelButton {
+  background-color: var(--background-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.cancelButton:hover {
+  background-color: var(--background-hover);
+}
+
+.saveButton {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+}
+
+.saveButton:hover {
+  background-color: var(--accent-color-dark);
+}
+
+.accessDenied {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.accessDenied h1 {
+  color: var(--error-color);
+  margin-bottom: 16px;
+}
+
+.accessDenied p {
+  margin-bottom: 24px;
+  color: var(--text-secondary);
+}
+
+.accessDenied button {
+  padding: 10px 16px;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .filters {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .searchForm {
+    width: 100%;
+    margin-left: 0;
+  }
+  
+  .searchInput {
+    flex-grow: 1;
+  }
+  
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .usersTable {
+    font-size: 0.85rem;
+  }
+  
+  .usersTable th,
+  .usersTable td {
+    padding: 8px;
+  }
+  
+  .statusBadge,
+  .verificationBadge {
+    padding: 3px 6px;
+    font-size: 0.75rem;
+  }
+} 

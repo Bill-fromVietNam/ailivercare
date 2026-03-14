@@ -1,0 +1,436 @@
+/* Thiết lập chung */
+.dashboardContainer {
+  padding: 2rem;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.filters {
+  display: flex;
+  gap: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 0.25rem;
+  border-radius: 8px;
+}
+
+.filterButton {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: transparent;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  color: var(--text-secondary, #666);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filterButton.active {
+  background-color: #1976d2;
+  color: white;
+  font-weight: 500;
+}
+
+.filterButton:hover:not(.active) {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Thẻ thống kê */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.statCard {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: flex-start;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  position: relative;
+}
+
+.statCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.statCard::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 6px;
+}
+
+.statCard.primary::after {
+  background-color: #1976d2;
+}
+
+.statCard.success::after {
+  background-color: #43a047;
+}
+
+.statCard.warning::after {
+  background-color: #ff9800;
+}
+
+.statCard.info::after {
+  background-color: #03a9f4;
+}
+
+.statIcon {
+  font-size: 2rem;
+  margin-right: 1.25rem;
+  opacity: 0.8;
+}
+
+.statContent {
+  flex: 1;
+}
+
+.statTitle {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.statValue {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.statTrend {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+/* Biểu đồ */
+.chartsRow {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.lineChartContainer, .doughnutChartContainer {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.sectionTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.chartHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.chartSubtitle {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.chartCanvas {
+  height: 300px;
+  position: relative;
+}
+
+/* Hoạt động và lịch hẹn */
+.activitiesContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.recentActivities, .upcomingAppointments {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.activityList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.activityItem {
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.activityItem:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.activityIcon {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  flex-shrink: 0;
+  font-size: 1.2rem;
+}
+
+.activityContent {
+  flex: 1;
+}
+
+.activityTitle {
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+
+.activityTime {
+  font-size: 0.8rem;
+  color: #777;
+  margin-bottom: 0.5rem;
+}
+
+.activityDescription {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.appointmentsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.appointmentItem {
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 8px;
+  padding: 1rem;
+  transition: all 0.2s ease;
+}
+
+.appointmentItem:hover {
+  background: rgba(0, 0, 0, 0.05);
+  transform: translateX(4px);
+}
+
+.appointmentDate {
+  background: #1976d2;
+  color: white;
+  border-radius: 8px;
+  padding: 0.5rem;
+  text-align: center;
+  margin-right: 1rem;
+  width: 50px;
+  flex-shrink: 0;
+}
+
+.dateDay {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.dateMonth {
+  font-size: 0.8rem;
+}
+
+.appointmentContent {
+  flex: 1;
+}
+
+.appointmentTitle {
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+
+.appointmentDetails {
+  font-size: 0.85rem;
+  color: #555;
+  display: flex;
+  gap: 1rem;
+}
+
+.appointmentTime, .appointmentDoctor {
+  display: flex;
+  align-items: center;
+}
+
+.appointmentStatus {
+  font-size: 0.8rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  background: rgba(0, 128, 0, 0.1);
+  color: green;
+}
+
+.viewAllLink {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.viewAllLink a {
+  color: #1976d2;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.viewAllLink a:hover {
+  color: #0d47a1;
+}
+
+.viewAllLink a::after {
+  content: '→';
+  margin-left: 0.5rem;
+}
+
+/* Dark mode */
+:global(.dark) .statCard,
+:global(.dark) .lineChartContainer,
+:global(.dark) .doughnutChartContainer,
+:global(.dark) .recentActivities,
+:global(.dark) .upcomingAppointments {
+  background: #1e1e1e;
+  border-color: #333;
+}
+
+:global(.dark) .title,
+:global(.dark) .sectionTitle,
+:global(.dark) .statValue,
+:global(.dark) .activityTitle,
+:global(.dark) .appointmentTitle {
+  color: #f0f0f0;
+}
+
+:global(.dark) .statTitle,
+:global(.dark) .chartSubtitle,
+:global(.dark) .activityDescription,
+:global(.dark) .appointmentDetails {
+  color: #aaa;
+}
+
+:global(.dark) .statTrend,
+:global(.dark) .activityTime {
+  color: #888;
+}
+
+:global(.dark) .activityItem {
+  border-color: #333;
+}
+
+:global(.dark) .appointmentItem {
+  background: #2a2a2a;
+}
+
+:global(.dark) .appointmentItem:hover {
+  background: #333;
+}
+
+:global(.dark) .activityIcon {
+  background: #333;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .chartsRow {
+    grid-template-columns: 1fr;
+  }
+  
+  .chartCanvas {
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboardContainer {
+    padding: 1rem;
+  }
+  
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .activitiesContainer {
+    grid-template-columns: 1fr;
+  }
+  
+  .appointmentDate {
+    width: 40px;
+    padding: 0.3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .appointmentItem {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .appointmentDate {
+    margin-bottom: 0.5rem;
+    width: 100%;
+  }
+  
+  .appointmentStatus {
+    margin-top: 0.5rem;
+    align-self: flex-start;
+  }
+} 

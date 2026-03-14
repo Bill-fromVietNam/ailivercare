@@ -1,0 +1,203 @@
+.editor {
+  background-color: var(--background-primary);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.title {
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+}
+
+.cancelButton, 
+.saveButton {
+  padding: 10px 16px;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cancelButton {
+  background-color: var(--background-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.cancelButton:hover {
+  background-color: var(--background-hover);
+}
+
+.saveButton {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+}
+
+.saveButton:hover {
+  background-color: var(--accent-color-dark);
+}
+
+.basicInfo {
+  margin-bottom: 24px;
+  padding: 20px;
+  background-color: var(--background-secondary);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.formGroup {
+  margin-bottom: 16px;
+}
+
+.label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+  font-family: inherit;
+}
+
+.textarea {
+  resize: vertical;
+}
+
+.sectionsContainer {
+  margin-bottom: 20px;
+}
+
+.sectionsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.sectionsTitle {
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.addSectionButton {
+  padding: 8px 16px;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.addSectionButton:hover {
+  background-color: var(--accent-color-dark);
+}
+
+.emptyState {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: var(--background-secondary);
+  border: 1px dashed var(--border-color);
+  border-radius: 8px;
+  color: var(--text-secondary);
+}
+
+.emptyStateButton {
+  margin-top: 16px;
+  padding: 10px 20px;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.emptyStateButton:hover {
+  background-color: var(--accent-color-dark);
+}
+
+.sectionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.emptyQuestions {
+  padding: 20px;
+  text-align: center;
+  background-color: var(--background-primary);
+  border: 1px dashed var(--border-color);
+  border-radius: 8px;
+  color: var(--text-secondary);
+}
+
+.questionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .actions {
+    width: 100%;
+  }
+  
+  .cancelButton,
+  .saveButton {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .sectionsHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .addSectionButton {
+    width: 100%;
+  }
+} 
